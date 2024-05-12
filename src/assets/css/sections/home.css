@@ -1,0 +1,39 @@
+#home {
+  display: flex;
+  place-items: initial;
+}
+
+#home .container {
+  font-weight: var(--font-semibold);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#home .year {
+  float: right;
+}
+
+#home .logo {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  filter: drop-shadow(var(--shadow-offset) var(--shadow-intensity) var(--color-accent));
+}
+
+#home .field {
+  text-align: center;
+}
+
+#home .field::before {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1104 604' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23f7f7f7' stroke-width='35' d='M202.5 518.271C296.162 475.114 418.347 449 552 449C685.653 449 807.838 475.114 901.5 518.271M902 86C808.338 129.157 686.153 155.271 552.5 155.271C418.847 155.271 296.662 129.157 203 86M34 301.5H1102M550.5 586V18M1086 302C1086 458.849 846.92 586 552 586C257.08 586 18 458.849 18 302C18 145.151 257.08 18 552 18C846.92 18 1086 145.151 1086 302ZM822 302C822 458.849 701.341 586 552.5 586C403.659 586 283 458.849 283 302C283 145.151 403.659 18 552.5 18C701.341 18 822 145.151 822 302Z'%3E%3C/path%3E%3C/svg%3E%0A");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  width: 4rem;
+  height: 2rem;
+  margin: 0 auto;
+}

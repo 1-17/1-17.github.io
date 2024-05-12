@@ -1,0 +1,107 @@
+#about .container {
+  display: grid;
+  place-items: center;
+  gap: var(--spacing-base);
+  height: 100%;
+}
+
+#about .card {
+  --card-padding: 1rem;
+  --rotation: 5deg;
+  --avatar-size: 50%;
+  background-color: var(--color-secondary);
+  background-image: url("../../img/texture-card.png");
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow-offset) var(--shadow-intensity) var(--shadow-color);
+  position: relative;
+  font-size: 0;
+  white-space: nowrap;
+  max-width: 24rem;
+  margin: 0 auto var(--spacing-base);
+  padding: var(--card-padding);
+  rotate: var(--rotation);
+  transition: rotate var(--transition-time);
+}
+
+#about .card:hover {
+  rotate: calc(var(--rotation) * -1);
+}
+
+#about .card > * {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: var(--font-base);
+}
+
+#about .card .star, #about .card .cross, #about .card .newspaper-letters {
+  position: absolute;
+  filter: drop-shadow(var(--shadow-offset) var(--shadow-intensity) var(--shadow-color));
+}
+
+#about .card .avatar {
+  --shadow-offset: 0 0;
+  box-shadow: var(--shadow-offset) var(--shadow-intensity) var(--shadow-color);
+  width: var(--avatar-size);
+  min-width: 6.5rem;
+}
+
+#about .card .star {
+  top: 0;
+  left: -0.5rem;
+  width: 5.5rem;
+  rotate: -10deg;
+}
+
+#about .card .cross {
+  top: 0.5rem;
+  right: 0;
+  width: 3.5rem;
+  rotate: -10deg;
+}
+
+#about .card .newspaper-letters {
+  left: 27.5%;
+  bottom: 0.1rem;
+  height: 3rem;
+}
+
+#about .card .information-list {
+  line-height: 1.25rem;
+  width: calc((100% - var(--avatar-size)) - var(--card-padding));
+  margin-left: 1rem;
+}
+
+#about .card .information-list li:not(:first-child) {
+  margin-top: 1rem;
+}
+
+#about .card .information-list .information-title {
+  display: block;
+  font-size: var(--font-sm);
+  text-transform: uppercase;
+}
+
+#about .card .information-list .information-text {
+  font-weight: var(--font-semibold);
+}
+
+#about .contact-nav {
+  justify-self: start;
+}
+
+#about .contacts-list a::after {
+  --line-thickness: 1rem;
+  content: "";
+  background-image: url("../../img/pencil-line.png");
+  background-size: 100% var(--line-thickness);
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 0;
+  height: var(--line-thickness);
+}
+
+#about .contacts-list a:hover::after {
+  width: 100%;
+}

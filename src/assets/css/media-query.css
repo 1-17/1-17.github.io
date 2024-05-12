@@ -1,0 +1,105 @@
+@media screen and (min-width: 768px) {
+  #home .field::before {
+    display: inline-block !important;
+    vertical-align: middle;
+    margin: 0 0.5rem 0 0 !important;
+  }
+
+  .contact-nav {
+    width: 100% !important;
+  }
+
+  .contact-nav .contacts-list {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-sm) 0;
+  }
+
+  .contact-nav .contacts-list li:not(:first-child) {
+    margin-top: 0;
+  }
+
+  #education_skills .container > * {
+    display: inline-block;
+  }
+
+  #education_skills .skills {
+    float: right;
+    vertical-align: top;
+    margin: 0 !important;
+  }
+
+  #projects .projects-list:has(:nth-child(2)) {
+    grid-template-columns: repeat(2, var(--polaroid-width));
+  }
+
+  .project {
+    position: relative;
+  }
+
+  .project .info-container {
+    width: 50%;
+  }
+
+  .project .info-container h2 {
+    margin-top: 0 !important;
+  }
+  
+  .project img {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: initial !important;
+    width: calc(50% - var(--spacing-sm)) !important;
+    max-width: none !important;
+    margin: 0 0 0 var(--spacing-sm) !important;
+    transform: translateY(-50%);
+    z-index: -1;
+  }
+
+  .project:nth-child(even) .info-container {
+    float: right;
+  }
+
+  .project .buttons-list {
+    max-width: none !important;
+  }
+
+  .project:nth-child(even) img {
+    left: 0;
+    margin: 0 var(--spacing-sm) 0 0 !important;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  section .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  #about .first-row > * {
+    display: inline-block;
+    width: calc(50% - var(--spacing-base));
+  }
+
+  #about .presentation {
+    float: left;
+    margin-right: var(--spacing-base);
+  }
+
+  #about .card {
+    margin: 10% 0 0 !important;
+  }
+
+  #projects .projects-list:has(:nth-child(3)) {
+    grid-template-columns: repeat(3, var(--polaroid-width));
+  }
+
+  .project .info-container {
+    width: 50%;
+  }
+
+  .project img {
+    width: calc(50% - var(--spacing-sm)) !important;
+  }
+}

@@ -1,0 +1,38 @@
+.contact-nav .contacts-list li {
+  width: fit-content;
+}
+
+.contact-nav .contacts-list li:not(:first-child) {
+  margin-top: var(--spacing-base);
+}
+
+.contact-nav .contacts-list a {
+  position: relative;
+  font-weight: var(--font-semibold);
+  white-space: nowrap;
+}
+
+.contact-nav .contacts-list a:hover {
+  text-shadow: var(--shadow-offset) var(--shadow-intensity) var(--shadow-color);
+}
+
+.contact-nav .contacts-list a::before, .contact-nav .contacts-list a::after {
+  transition: all var(--transition-time);
+}
+
+.contact-nav .contacts-list a::before /* Arrow */ {
+  content: "";
+  background-image: url("../img/pencil-arrow.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  float: right;
+  width: 1.5rem;
+  height: 2rem;
+  margin-top: -0.5rem;
+  margin-left: 0.25rem;
+  rotate: 10deg;
+}
+
+.contact-nav .contacts-list a:hover::before /* Arrow */ {
+  opacity: 0;
+}

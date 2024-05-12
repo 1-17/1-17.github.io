@@ -1,0 +1,88 @@
+@font-face {
+  font-family: "Death Mohawk";
+  src: url("../font/Death_Mohawk.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Dry Brush";
+  src: url("../font/Dry_Brush.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
+
+:root {
+  --color-primary: #f7f7f7;
+  --color-secondary: #070707;
+  --color-accent: #f31a1a;
+  --shadow-offset: 0.2rem 0.2rem;
+  --shadow-intensity: 0.25rem;
+  --shadow-color: #000;
+  --font-secondary: "Death Mohawk", sans-serif;
+  --font-tertiary: "Dry Brush", sans-serif;
+  --font-sm: 0.75rem;
+  --font-base: 1.05rem;
+  --font-lg: 1.25rem;
+  --font-xl: 2rem;
+  --font-xxl: 6rem;
+  --font-semibold: 600;
+  --font-bold: 800;
+  --spacing-base: 3rem;
+  --spacing-sm: calc(var(--spacing-base) / 2);
+  --spacing-lg: calc(var(--spacing-base) * 2);
+  --transition-time: 0.25s;
+  
+  background-color: var(--color-secondary);
+  background-image: url("../img/texture-noise.png");
+  color: var(--color-primary);
+  font-family: "Archivo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: var(--font-base);
+  font-style: normal;
+  font-variation-settings: "wdth" 112.5;
+  scroll-behavior: smooth;
+}
+
+section {
+  display: grid;
+  place-items: center;
+  min-height: calc(100vh - var(--spacing-lg));
+  padding: var(--spacing-base) 1.5rem;
+}
+
+section .container {
+  width: 100%;
+}
+
+h2 {
+  color: var(--color-accent);
+  font-family: var(--font-secondary);
+  font-size: var(--font-xxl);
+  letter-spacing: 0.25rem;
+  line-height: 3rem;
+  margin-bottom: 1.25rem;
+}
+
+h3 {
+  font-weight: var(--font-bold);
+}
+
+p {
+  line-height: 1.5rem;
+  text-align: justify;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+svg {
+  fill: currentColor;
+}

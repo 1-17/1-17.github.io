@@ -1,0 +1,82 @@
+#projects .container {
+  display: grid;
+  text-align: center;
+  height: 100%;
+}
+
+#projects .projects-list {
+  --polaroid-width: 12rem;
+  --rotate: 2.5deg;
+  counter-reset: item;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+#projects .projects-list:has(:nth-child(2)) {
+  display: grid;
+  gap: var(--spacing-sm) var(--spacing-base);
+}
+
+#projects .projects-list li {
+  width: var(--polaroid-width);
+}
+
+#projects .projects-list li:nth-child(1n + 1) {
+  rotate: var(--rotate);
+}
+
+#projects .projects-list li:nth-child(2n + 1) {
+  rotate: calc(var(--rotate) * -1);
+}
+
+#projects .projects-list a {
+  --padding-x: 1rem;
+  background-color: var(--color-primary);
+  background-image: url("../../img/texture-paper.png");
+  border-radius: 0.1rem;
+  box-shadow: var(--shadow-offset) var(--shadow-intensity) var(--shadow-color);
+  color: var(--color-secondary);
+  font-family: var(--font-tertiary);
+  font-size: var(--font-xl);
+  text-align: right;
+  line-height: 4rem;
+  display: block;
+  width: calc(100% - (var(--padding-x) * 2));
+  padding: 1rem var(--padding-x) 0;
+}
+
+#projects .projects-list a:hover {
+  scale: 1.05;
+  transition: scale var(--transition-time);
+}
+
+#projects .projects-list a::before {
+  --shadow-offset: 0.1rem 0.1rem;
+  counter-increment: item;
+  content: counter(item);
+  background-color: var(--color-secondary);
+  background-image: url("../../img/texture-card.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  box-shadow: inset var(--shadow-offset) 1rem var(--shadow-color), inset var(--shadow-offset) 2rem var(--shadow-color);
+  color: var(--color-primary);
+  font-size: var(--font-xxl);
+  text-align: center;
+  display: block;
+  line-height: calc(var(--polaroid-width) - 30%);
+  width: 100%;
+}
+
+#projects .projects-list a:hover::before {
+  animation: fadeInImage 2s;
+}
+
+@keyframes fadeInImage {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

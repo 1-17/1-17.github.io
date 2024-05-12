@@ -1,0 +1,75 @@
+.project .info-container h2 {
+  color: currentColor;
+  font-family: var(--font-tertiary);
+  font-size: 4rem;
+  margin-top: var(--spacing-sm);
+}
+
+.project .techs-list {
+  font-size: 0;
+  text-align: right;
+  margin-bottom: 0.5rem;
+}
+
+.project .techs-list li {
+  display: inline;
+}
+
+.project .techs-list li:not(:first-child) {
+  margin-left: 1rem;
+}
+
+.project .techs-list svg {
+  width: 1.5rem;
+}
+
+.project .buttons-list {
+  font-size: 0;
+  white-space: nowrap;
+  margin-top: var(--spacing-sm);
+  max-width: 500px;
+}
+
+.project .buttons-list li {
+  --margin: var(--spacing-sm);
+  display: inline-block;
+  font-size: var(--font-base);
+  width: calc(50% - (var(--margin) / 2));
+}
+
+.project .buttons-list li:not(:first-child) {
+  margin-left: var(--margin);
+}
+
+.project .code-button, .project .demo-button {
+
+  display: block;
+  text-align: center;
+  text-shadow: var(--shadow-offset) var(--shadow-intensity) var(--shadow-color);
+  padding: 0.75rem;
+  transition: scale var(--transition-time);
+}
+
+.project .code-button:hover, .project .demo-button:hover {
+  scale: 1.2;
+}
+
+.project .code-button {
+  background-image: url("../../img/pencil-rectangle.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.project .demo-button {
+  background-image: url("../../img/pencil-fill.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.project img {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  filter: drop-shadow(var(--shadow-offset) var(--shadow-intensity) var(--shadow-color));
+}

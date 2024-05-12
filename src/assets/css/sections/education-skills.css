@@ -1,0 +1,27 @@
+#education_skills .courses-list, #education_skills .skills-list {
+  line-height: 1.5rem;
+}
+
+#education_skills .courses-list li:not(:first-child) {
+  margin-top: 1rem;
+}
+
+#education_skills .skills {
+  margin-top: var(--spacing-base);
+}
+
+#education_skills .skills-list .techs-list {
+  font-size: 0;
+}
+
+#education_skills .skills-list .techs-list li {
+  display: inline;
+}
+
+#education_skills .skills-list .techs-list li:not(:first-child) {
+  margin-left: 1rem;
+}
+
+#education_skills .skills-list .techs-list svg {
+  width: 2.5rem;
+}
